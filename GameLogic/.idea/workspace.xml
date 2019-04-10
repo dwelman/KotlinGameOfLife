@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c59ed149-df2e-4b0d-a300-0e6e8d819a61" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/kgol/GameOfLife.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/kgol/GameOfLife.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kgol/GameOfLifeTests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/kgol/GameOfLifeTests.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/kgol/GameOfLife.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="452">
-              <caret line="59" column="45" lean-forward="true" selection-start-line="59" selection-start-column="45" selection-end-line="59" selection-end-column="45" />
+            <state relative-caret-position="316">
+              <caret line="68" column="62" lean-forward="true" selection-start-line="68" selection-start-column="62" selection-end-line="68" selection-end-column="62" />
               <folding>
                 <element signature="e#14#59#0" expanded="true" />
               </folding>
@@ -28,11 +28,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/kgol/GameOfLifeTests.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="105" column="43" selection-start-line="105" selection-start-column="43" selection-end-line="105" selection-end-column="43" />
+            <state relative-caret-position="401">
+              <caret line="103" lean-forward="true" selection-start-line="103" selection-end-line="103" />
               <folding>
                 <element signature="e#14#96#0" expanded="true" />
               </folding>
@@ -55,8 +55,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/kgol/GameOfLifeTests.kt" />
         <option value="$PROJECT_DIR$/src/kgol/GameOfLife.kt" />
+        <option value="$PROJECT_DIR$/src/kgol/GameOfLifeTests.kt" />
       </list>
     </option>
   </component>
@@ -82,6 +82,17 @@
             <path>
               <item name="GameLogic" type="b2602c69:ProjectViewProjectNode" />
               <item name="GameLogic" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GameLogic" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GameLogic" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GameLogic" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GameLogic" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="kgol" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -159,14 +170,11 @@
       <option name="presentableId" value="Default" />
       <updated>1554813080392</updated>
       <workItem from="1554813083244" duration="1749000" />
-      <workItem from="1554869557113" duration="6803000" />
+      <workItem from="1554869557113" duration="9542000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="GameOfLifeTests - 2019.04.10 at 07h 13m 27s.xml">
-      <configuration name="GameOfLifeTests" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="GameOfLifeTests - 2019.04.10 at 07h 20m 16s.xml">
       <configuration name="GameOfLifeTests" configurationId="JUnit" />
     </history-entry>
@@ -194,9 +202,12 @@
     <history-entry file="GameOfLifeTests - 2019.04.10 at 07h 32m 08s.xml">
       <configuration name="GameOfLifeTests" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="GameOfLifeTests - 2019.04.10 at 08h 45m 09s.xml">
+      <configuration name="GameOfLifeTests" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8552000" />
+    <option name="totallyTimeSpent" value="11291000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -220,7 +231,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32936078" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -229,7 +240,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50053304" side_tool="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -246,22 +257,22 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/kgol/GameOfLifeTests.kt">
+    <entry file="file://$PROJECT_DIR$/src/kgol/GameOfLife.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="105" column="43" selection-start-line="105" selection-start-column="43" selection-end-line="105" selection-end-column="43" />
+        <state relative-caret-position="316">
+          <caret line="68" column="62" lean-forward="true" selection-start-line="68" selection-start-column="62" selection-end-line="68" selection-end-column="62" />
           <folding>
-            <element signature="e#14#96#0" expanded="true" />
+            <element signature="e#14#59#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/kgol/GameOfLife.kt">
+    <entry file="file://$PROJECT_DIR$/src/kgol/GameOfLifeTests.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="59" column="45" lean-forward="true" selection-start-line="59" selection-start-column="45" selection-end-line="59" selection-end-column="45" />
+        <state relative-caret-position="401">
+          <caret line="103" lean-forward="true" selection-start-line="103" selection-end-line="103" />
           <folding>
-            <element signature="e#14#59#0" expanded="true" />
+            <element signature="e#14#96#0" expanded="true" />
           </folding>
         </state>
       </provider>

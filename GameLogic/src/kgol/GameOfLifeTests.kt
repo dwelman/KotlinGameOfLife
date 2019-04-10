@@ -103,7 +103,7 @@ class GameOfLifeTests {
         println("Check that cells survive for 10 generations")
 
         for (i in 1..10) {
-            var newMap = applyRules(newMap)
+            newMap = applyRules(newMap)
             assertThat(newMap[0][0], `is`(true))
             assertThat(newMap[0][1], `is`(true))
             assertThat(newMap[1][0], `is`(true))
