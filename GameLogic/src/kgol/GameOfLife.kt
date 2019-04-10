@@ -2,13 +2,22 @@ package kgol
 
 import kotlin.math.max
 import kotlin.math.min
+import kotlin.random.Random
+
+
+val ALIVE_VIZ = "O"
+val DEAD_VIZ = "."
 
 fun main(args: Array<String>) {
-    val gameMap = createEmptyMap(10, 10)
+    var gameMap = createEmptyMap(25, 25)
+    gameMap = randomlyPopulateMap(gameMap)
+    var vizMap = createEmptyVizMap(gameMap[0].size,gameMap.size)
     //Any live cell with fewer than two live neighbours dies, as if by underpopulation.
 
+
+
     //This cluster should live forever in theory
-    gameMap[0][0] = true
+    /*gameMap[0][0] = true
     gameMap[0][1] = true
     gameMap[1][0] = true
     gameMap[1][1] = true
@@ -16,10 +25,48 @@ fun main(args: Array<String>) {
     gameMap[5][5] = true
     gameMap[5][6] = true
     gameMap[5][7] = true
-    gameMap[6][5] = true
+    gameMap[6][5] = true*/
 
-    var newMap = applyRules(gameMap)
-    newMap = applyRules(newMap)
+    vizMap = updateVizMap(gameMap)
+
+    while(true){
+        //readLine()
+        Thread.sleep(200)
+        gameMap = applyRules(gameMap)
+        vizMap = updateVizMap(gameMap)
+    }
+
+}
+
+fun randomlyPopulateMap(map: Array<Array<Boolean>>) :  Array<Array<Boolean>> {
+    val xSize: Int = map[0].size
+    val ySize: Int = map.size
+
+    val returnMap = createEmptyMap(xSize, ySize)
+
+    for (y in 0 until ySize) {
+        var row = arrayOf<Boolean>()
+        for (x in 0 until xSize) {
+            val randomValue = List(1) { Random.nextInt(0, 5) }
+            if(randomValue[0] == 1)
+                returnMap[x][y] = true
+        }
+    }
+
+    return returnMap
+}
+
+fun createEmptyVizMap(xSize: Int, ySize: Int) : Array<Array<String>>{
+    var cells = arrayOf<Array<String>>()
+
+    for (y in 0 until ySize) {
+        var row = arrayOf<String>()
+        for (x in 0 until xSize) {
+            row += DEAD_VIZ
+        }
+        cells += row
+    }
+    return cells
 }
 
 fun createEmptyMap(xSize: Int, ySize: Int) : Array<Array<Boolean>> {
@@ -77,4 +124,43 @@ fun applyRules(map: Array<Array<Boolean>>) :  Array<Array<Boolean>> {
     }
 
     return returnMap
+}
+
+fun updateVizMap(dataMap: Array<Array<Boolean>>) :  Array<Array<String>>{
+    val xSize: Int = dataMap[0].size
+    val ySize: Int = dataMap.size
+
+    val vizMap = createEmptyVizMap(xSize, ySize)
+
+    for (y in 0 until ySize) {
+        var row = arrayOf<String>()
+        for (x in 0 until xSize) {
+            vizMap[x][y] = if(dataMap[x][y]) {
+                ALIVE_VIZ
+            }
+            else{
+                DEAD_VIZ
+            }
+        }
+    }
+
+    displayVizMap(vizMap)
+    return vizMap
+}
+
+fun displayVizMap(vizMap: Array<Array<String>>){
+    val xSize: Int = vizMap[0].size
+    val ySize: Int = vizMap.size
+
+    var currentLine:String
+
+    for (x in 0 until xSize) {
+        currentLine = ""
+        var row = arrayOf<String>()
+        for (y in 0 until ySize) {
+            currentLine+=vizMap[x][y]
+        }
+        println(currentLine)
+    }
+    println()
 }
