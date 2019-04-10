@@ -46,7 +46,6 @@ fun applyRules(map: Array<Array<Boolean>>) :  Array<Array<Boolean>> {
     val ySize: Int = map.size
     val returnMap = createEmptyMap(xSize, ySize)
     var aliveNeighbourCount: Int
-    var neighbours: Int
 
     //Iterate and perform
     for (y in 0 until ySize) {
@@ -59,7 +58,7 @@ fun applyRules(map: Array<Array<Boolean>>) :  Array<Array<Boolean>> {
                 for (i in max(0, x-1)..min(x+1, xSize - 1)) {
                     if (i != x || j != y) {
                         //This is a neighbour
-                        if (map[j][i] == true) {
+                        if (map[j][i]) {
                             aliveNeighbourCount++
                         }
                     }
