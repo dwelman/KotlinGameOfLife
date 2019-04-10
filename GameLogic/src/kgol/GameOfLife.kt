@@ -68,6 +68,8 @@ fun applyRules(map: Array<Array<Boolean>>) :  Array<Array<Boolean>> {
             returnMap[y][x] = when {
                 aliveNeighbourCount  < 2 && map[y][x] -> false
                 aliveNeighbourCount in 2..3 && map[y][x] -> true
+                aliveNeighbourCount > 3 && map[y][x] -> false
+                aliveNeighbourCount == 3 && !map[y][x] -> true
                 else -> false
             }
 
