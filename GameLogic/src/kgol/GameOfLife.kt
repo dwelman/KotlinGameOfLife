@@ -9,7 +9,7 @@ val ALIVE_VIZ = "O"
 val DEAD_VIZ = "."
 
 fun main(args: Array<String>) {
-    var gameMap = createEmptyMap(25, 25)
+    var gameMap = createEmptyMap(20, 200)
     gameMap = randomlyPopulateMap(gameMap)
     var vizMap = createEmptyVizMap(gameMap[0].size,gameMap.size)
 
@@ -34,7 +34,7 @@ fun randomlyPopulateMap(map: Array<Array<Boolean>>) :  Array<Array<Boolean>> {
         for (x in 0 until xSize) {
             val randomValue = List(1) { Random.nextInt(0, 5) }
             if(randomValue[0] == 1)
-                returnMap[x][y] = true
+                returnMap[y][x] = true
         }
     }
 
@@ -120,7 +120,7 @@ fun updateVizMap(dataMap: Array<Array<Boolean>>) :  Array<Array<String>>{
     for (y in 0 until ySize) {
         var row = arrayOf<String>()
         for (x in 0 until xSize) {
-            vizMap[x][y] = if(dataMap[x][y]) {
+            vizMap[y][x] = if(dataMap[y][x]) {
                 ALIVE_VIZ
             }
             else{
@@ -143,7 +143,7 @@ fun displayVizMap(vizMap: Array<Array<String>>){
         currentLine = ""
         var row = arrayOf<String>()
         for (y in 0 until ySize) {
-            currentLine+=vizMap[x][y]
+            currentLine+=vizMap[y][x]
         }
         println(currentLine)
     }
