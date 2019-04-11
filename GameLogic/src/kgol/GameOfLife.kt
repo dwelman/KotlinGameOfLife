@@ -12,25 +12,10 @@ fun main(args: Array<String>) {
     var gameMap = createEmptyMap(25, 25)
     gameMap = randomlyPopulateMap(gameMap)
     var vizMap = createEmptyVizMap(gameMap[0].size,gameMap.size)
-    //Any live cell with fewer than two live neighbours dies, as if by underpopulation.
-
-
-
-    //This cluster should live forever in theory
-    /*gameMap[0][0] = true
-    gameMap[0][1] = true
-    gameMap[1][0] = true
-    gameMap[1][1] = true
-
-    gameMap[5][5] = true
-    gameMap[5][6] = true
-    gameMap[5][7] = true
-    gameMap[6][5] = true*/
 
     vizMap = updateVizMap(gameMap)
 
     while(true){
-        //readLine()
         Thread.sleep(200)
         gameMap = applyRules(gameMap)
         vizMap = updateVizMap(gameMap)
